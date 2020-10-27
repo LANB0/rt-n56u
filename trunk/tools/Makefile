@@ -37,6 +37,7 @@ go_build:
 	fi )
 	( if [ ! -d $(THISDIR)/go/go ]; then \
 	tar zxfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
+	chmod +x $(THISDIR)/go/go
 	fi )
 
 clean:
