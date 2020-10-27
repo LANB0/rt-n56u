@@ -31,7 +31,8 @@ build_v2ray:
 	sed -i \
 			'$(V2RAY_SED_ARGS)' \
 			distro/all/all.go ; \
-	GOOS=linux GOARCH=mipsle /opt/rt-n56u/trunk/tools/go/go build -ldflags "-w -s" -o $(THISDIR)/bin/v2ray; \
+	go version ; \
+	GOOS=linux GOARCH=mipsle go build -ldflags "-w -s" -o $(THISDIR)/bin/v2ray; \
 	)
 
 clean:
