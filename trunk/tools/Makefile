@@ -40,7 +40,7 @@ go_build:
 	export GOROOT=$(THISDIR)/go/go ; \
 	echo $(PATH) ; \
 	echo $(GOROOT) ; \
-	export PATH=$(PATH):$(GOROOT)/bin ; \
+	echo $(GOPATH) ; \
 	exit 1; \
 	fi )
 
