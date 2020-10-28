@@ -32,6 +32,7 @@ build_v2ray:
 			'$(V2RAY_SED_ARGS)' \
 			distro/all/all.go ; \
 	go version ; \
+	which go ; \
 	GOOS=linux GOARCH=mipsle go build -ldflags "-w -s" -o $(THISDIR)/bin/v2ray; \
 	)
 
