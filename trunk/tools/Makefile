@@ -39,18 +39,14 @@ go_build:
 	tar zxfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
 	cp $(THISDIR)/go/go /usr/local -rf ; \
 	cp /usr/local/go/bin/* /usr/bin/ -rf ; \
-	export GOROOT=/usr/local/go ; \
-	export GOPATH=$HOME/code/go ; \
-	PATH=$PATH:$GOROOT/bin:$GOPATH/bin ; \
-	exit 1 ; \
-	fi )	
+	fi )
 
-clean:	
-	if [ -f $(SSTRIP_NAME)/Makefile ] ; then \	
-		make -C $(SSTRIP_NAME) clean ; \	
-	fi ;	
-	rm -rf sstrip	
-	make -C mkimage clean	
-	make -C lzma clean	
-	make -C mksquashfs_xz clean	
+clean:
+	if [ -f $(SSTRIP_NAME)/Makefile ] ; then \
+		make -C $(SSTRIP_NAME) clean ; \
+	fi ;
+	rm -rf sstrip
+	make -C mkimage clean
+	make -C lzma clean
+	make -C mksquashfs_xz clean
 	rm -rf $(THISDIR)/go/go
