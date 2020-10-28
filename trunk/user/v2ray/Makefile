@@ -33,7 +33,7 @@ build_v2ray:
 			distro/all/all.go ; \
 	go version ; \
 	which go ; \
-	GOOS=linux GOARCH=mipsle /opt/hostedtoolcache/go/1.15.3/x64/bin/go build -ldflags "-w -s" -o $(THISDIR)/bin/v2ray; \
+	GOOS=linux GOARCH=mipsle go build -ldflags "-w -s" -o $(THISDIR)/bin/v2ray; \
 	)
 
 clean:
