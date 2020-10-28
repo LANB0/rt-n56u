@@ -1,4 +1,4 @@
-THISDIR = $(shell pwd)	
+THISDIR = $(shell pwd)
 go_version = 1.15.3
 # use host target
 CC        = gcc
@@ -31,7 +31,7 @@ ifeq ($(CONFIG_RT2880_ROOTFS_IN_FLASH),y)
 endif
 
 go_build:	
-	mkdir -p $(THISDIR)/go	
+	mkdir -p $(THISDIR)/go
 	( if [ ! -f $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ]; then \	
 	curl --create-dirs -L https://gomirrors.org/dl/go/go$(go_version).linux-amd64.tar.gz -o $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ; \	
 	fi )	
