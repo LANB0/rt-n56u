@@ -38,7 +38,8 @@ go_build:
 	( if [ ! -d $(THISDIR)/go/go ]; then \
 	tar zxfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
 	#go env
-	export GOROOT=$(THISDIR)/go/go ; \#设置为go安装的路径，有些安装包会自动设置默认的goroot
+	#设置为go安装的路径，有些安装包会自动设置默认的goroot
+	export GOROOT=$(THISDIR)/go/go ; \
 	export PATH=$PATH:$GOROOT/bin ; \
 	fi )
 
