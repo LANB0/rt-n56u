@@ -1,5 +1,6 @@
 THISDIR = $(shell pwd)
 v2ray_dir="v2ray.com/core/main"
+export GOROOT=/usr/local/go
 export GO111MODULE=on
 export GOPROXY=https://goproxy.io
 V2ray_VERSION := 4.31.3
