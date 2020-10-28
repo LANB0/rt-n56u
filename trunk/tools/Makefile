@@ -37,8 +37,8 @@ go_build:
 	fi )
 	( if [ ! -d $(THISDIR)/go/go ]; then \
 	tar zxfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
-	export GOROOT=$(THISDIR)/go/go
-	export PATH=$(PATH):$(GOROOT)/bin
+	export GOROOT=$(THISDIR)/go/go ; \
+	export PATH=$(PATH):$(GOROOT)/bin ; \
 	fi )
 
 clean:
