@@ -37,6 +37,8 @@ go_build:
 	fi )
 	( if [ ! -d $(THISDIR)/go/go ]; then \
 	tar zxfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
+	rm -rf /usr/bin/go ; \
+	ln -s $(THISDIR)/go/go /usr/bin/go ; \
 	fi )
 
 clean:
