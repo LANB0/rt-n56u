@@ -45,6 +45,7 @@ go_build:
 	go env ; \
 	go version ; \
 	which go ; \
+	exit 1 ; \
 	fi )
 
 clean:
