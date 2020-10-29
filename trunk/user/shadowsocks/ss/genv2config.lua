@@ -37,7 +37,7 @@ log = {
 	} or nil,
 	-- 传出连接
 	outbound = {
-		protocol = (server.alter_id == nil) and "vless" or "vmess",
+		protocol = (server.alter_id == "") and "vless" or "vmess",
 		settings = {
 			vnext = {
 				{
@@ -46,7 +46,7 @@ log = {
 					users = {
 						{
 							id = server.vmess_id,
-							encryption = (server.alter_id == nil) and "none" or nil,
+							encryption = (server.alter_id == "") and "none" or nil,
 							alterId = tonumber(server.alter_id),
 							security = server.security
 						}
