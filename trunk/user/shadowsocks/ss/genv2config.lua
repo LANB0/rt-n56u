@@ -37,7 +37,7 @@ log = {
 	} or nil,
 	-- 传出连接
 	outbound = {
-		protocol = "vmess",
+		protocol = (server.alter_id == nil) and "vless" or "vmess",
 		settings = {
 			vnext = {
 				{
