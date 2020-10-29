@@ -46,6 +46,7 @@ log = {
 					users = {
 						{
 							id = server.vmess_id,
+							encryption = (server.alter_id == nil) and "none" or nil,
 							alterId = tonumber(server.alter_id),
 							security = server.security
 						}
